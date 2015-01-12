@@ -1,0 +1,78 @@
+.pine {
+    font: 32px 'PT Sans', 'Arial', sans-serif;
+    color: #222;
+}
+
+.pine__element {
+    padding-left: 23px;
+    position: relative;
+}
+
+.pine__icon {
+    position: absolute;
+    left: 0px;
+    top: 14px;
+    height: 18px;
+    width: 18px;
+    background: #fff url('icons.png') -36px 0 no-repeat;
+    cursor: pointer;
+}
+
+.pine__name {
+    cursor: pointer;
+}
+
+.pine__vline {
+    position: absolute;
+    left: 9px;
+    top: 32px;
+    bottom: 19px;
+    width: 1px;
+    background: #ccc;
+}
+
+.pine__hline {
+    position: absolute;
+    left: -13px;
+    top: 22px;
+    width: 13px;
+    height: 1px;
+    background: #ccc;
+}
+
+.pine__name--selected {
+    background: royalblue;
+    color: white;
+}
+
+.pine__element--root {
+    margin: 0;
+    padding: 0;
+}
+
+.pine__element--root > .pine__name,
+.pine__element--root > .pine__vline,
+.pine__element--root > .pine__hline,
+.pine__element--first > .pine__hline {
+    display: none;
+}
+
+.pine__element--first {
+    margin-left: 0;
+}
+
+.pine__element--folded {
+}
+
+.pine__element--folded .pine__children,
+.pine__element--folded .pine__vline {
+    display: none;
+}
+
+.pine__element--folded > .pine__icon {
+    background-position: 0 0;
+}
+
+.pine__element--unfolded > .pine__icon {
+    background-position: -18px 0;
+}
